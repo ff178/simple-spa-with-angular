@@ -1,0 +1,11 @@
+<h1>Lookingfor: <small>{{term}}</small></h1>
+<div class="row" *ngIf="heroes.length == 0">
+    <div class="col-md-12">
+        <div class="alert alert-dark alert-light fade show" role="alert">
+            Opps! Heroe dont found with the term: <strong>{{term}}</strong>
+        </div>
+    </div>
+</div>
+<div class="card-columns">
+    <app-card-heroe [heroe]="heroe" [i]="heroe.i" *ngFor="let heroe of heroes"></app-card-heroe>
+</div>
